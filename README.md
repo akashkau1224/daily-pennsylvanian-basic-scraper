@@ -135,3 +135,11 @@ But it is important to use it responsibly and ethically. Here are some guideline
 9. Document your scraping process thoroughly for replicability, transparency and accountability.
 
 10. Continuously re-evaluate your scraping program against applicable laws and ethical principles.
+
+## Akash's Changes to the Scraper
+
+I changed this scraper to instead scrape for the top article in the opinions section. I did this because I thought it would be interesting to see overtime what people at Penn debate about. Is it mostly politics, dating, sports, etc? I specifically changed the central script.py file to have a different base URL (https://www.thedp.com/section/opinion) to reflect the opinions page. I also changed the HTML that the script will match for. Now it will match the first \<a\> tag's text that has an \<h3\> tag as a direct parent with the class "standard-link". In these more specific pages on the Daily Pennsylvanian, I found this matches the first article on the page.
+
+## Cron Syntax Schedule Explanation
+
+How I understand the cron syntax is the first field specifies the minute of every hour that the script will run. The second field specfies the hour of the day that the script will run. The third field specifies the day of the month the script will run. THe fourth field specifies the month of the year the script will run. The fifth field specifies the day of the week the script will run. In this case we have a couple asterisks, and this means it will run for every day/month/etc. for that specific time block. If we want to do multiple times in a specific time block, we can specifiy this with comma separated values.

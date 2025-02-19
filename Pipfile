@@ -5,10 +5,12 @@ verify_ssl = true
 
 [packages]
 bs4 = "*"
-loguru = "*"
 pytz = "*"
 requests = "*"
 waybackpy = "*"
+pywin32 = "*"
+pypiwin32 = "*"
+loguru = "==0.5.0"
 
 [dev-packages]
 ipykernel = "*"
